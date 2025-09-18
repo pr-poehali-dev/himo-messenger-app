@@ -1,0 +1,43 @@
+{
+  "tests": [
+    {
+      "name": "Test user registration",
+      "method": "POST",
+      "body": {
+        "action": "register",
+        "username": "testuser",
+        "password": "testpass123",
+        "email": "test@example.com"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "token": "string",
+        "user": {
+          "username": "testuser",
+          "custom_id": "string"
+        },
+        "message": "Registration successful"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test user login",
+      "method": "POST",
+      "body": {
+        "action": "login",
+        "username": "Himo",
+        "password": "Satoru1212"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "token": "string",
+        "user": {
+          "username": "Himo",
+          "is_admin": true
+        },
+        "message": "Login successful"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

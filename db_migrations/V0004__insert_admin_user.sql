@@ -1,0 +1,2 @@
+INSERT INTO users (username, password_hash, custom_id, him_coins, is_premium, is_verified, is_admin)
+VALUES ('Himo', '$2b$10$K3xzKjGRvCTHhPz0WJPz8.KNQzDhHxQwGK3Fz8DtRf9mXs4CpGgWS', 'HIMO', 999999, TRUE, TRUE, TRUE);
